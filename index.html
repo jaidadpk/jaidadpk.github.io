@@ -1,103 +1,247 @@
-PE html>
-<html lang="en"
+<!DOCTYPE html>
+<html lang="ur">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JAIDAD PAKISTAN - Official Real Estate | 03334113473</title>
+
+<title>JaidadPk | Pakistan Property Portal</title>
+
+<meta name="description" content="JaidadPk Pakistan property portal. Find houses, plots, apartments and rental properties. Contact us on WhatsApp.">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Segoe UI,sans-serif}
-body{background:#f1f5f9}
-.header{background:#0f172a;color:#fff;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000}
-.logo{height:38px;background:#fff;border-radius:6px;padding:3px}
-.search-bar{background:#fff;padding:12px;position:sticky;top:58px;z-index:999;box-shadow:0 2px 10px rgba(0,0,0,.1);border-bottom:3px solid #fbbf24}
-.input,select{width:100%;padding:11px;border:1.5px solid #cbd5e1;border-radius:10px;font-size:13px;font-weight:600;margin:4px 0}
-.btn{padding:12px;border:none;border-radius:10px;font-weight:800;cursor:pointer;width:100%}
-.btn:active{transform:scale(.97)}
-.card{background:#fff;margin:10px;border-radius:14px;padding:14px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
-.prop{background:#fff;border-radius:14px;overflow:hidden;margin:10px;box-shadow:0 3px 12px rgba(0,0,0,.08);cursor:pointer}
-.badge{padding:5px 10px;border-radius:20px;font-size:10px;font-weight:800;display:inline-block;margin:2px}
-.tab{padding:8px 14px;border-radius:20px;border:1.5px solid #e2e8f0;background:#fff;font-size:12px;font-weight:700;cursor:pointer;margin:3px;display:inline-block}
-.whatsapp{position:fixed;bottom:85px;right:12px;background:#25D366;color:#fff;padding:12px 18px;border-radius:30px;font-weight:800;text-decoration:none;z-index:9999;box-shadow:0 4px 12px rgba(0,0,0,.2)}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-#picModal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.88);z-index:10000;padding:15px;overflow:auto}
-</style>
-</head>
-<body>
-<div class="header">
-<div style="display:flex;align-items:center;gap:8px">
-<img src="logo.png" class="logo" onerror="this.style.display='none'">
-<div><b>JAIDAD <span style="color:#fbbf24">PAKISTAN</span></b>
-<div style="font-size:10px;line-height:1.2">Real Estate Office: Sharaqpur Sharif, Sheikhupura<br>All Pakistan: Lahore | Karachi | Islamabad | Faisalabad<br>03334113473</div></div>
-</div>
-<div style="background:#fbbf24;color:#0f172a;padding:5px 10px;border-radius:20px;font-size:11px;font-weight:800">ENGLISH - NO ERROR</div>
-</div>
-
-<div style="max-width:800px;margin:0 auto;padding-bottom:90px">
-<div class="card" style="background:linear-gradient(135deg,#0f172a,#1e3a8a);color:#fff">
-<h3 style="color:#fbbf24">➕ ADD PROPERTY - Easy Image & Detail</h3>
-<input id="f_title" class="input" placeholder="Title * Required - e.g. 5 Marla House for Sale Sharaqpur">
-<div class="grid2">
-<select id="f_purpose" class="input" style="border:2px solid #fbbf24"><option value="">Purpose * Required - Buy / Sale</option><option>For Sale</option><option>For Rent</option><option>Commission</option><option>Investment</option><option>Wanted</option></select>
-<select id="f_type" class="input"><option value="">Property Type * Required</option><option>House</option><option>Plot / File</option><option>Commercial Shop</option><option>Agricultural Land</option><option>Farm House</option><option>Factory</option><option>Flat / Apartment</option></select>
-</div>
-<div class="grid2">
-<select id="f_city" class="input"><option value="">City * Required</option><option>Sharaqpur Sharif</option><option>Sheikhupura</option><option>Lahore</option><option>Karachi</option><option>Islamabad</option><option>Faisalabad</option><option>Multan</option><option>Gujranwala</option><option>Sialkot</option><option>All Pakistan</option></select>
-<input id="f_size" class="input" placeholder="Size * e.g. 5 Marla / 1 Kanal">
-</div>
-<div class="grid2">
-<input id="f_price" class="input" placeholder="Price * Required - e.g. 50 Lakh">
-<input id="f_area" class="input" placeholder="Location * Required - e.g. Main Road Sharaqpur">
-</div>
-<input id="f_wa" class="input" placeholder="WhatsApp * Required" value="923334113473">
-<p style="font-size:12px;color:#fbbf24;margin:8px 0">📸 Add Your 3 Property Images Here - Easy</p>
-<input type="file" id="pic1" accept="image/*" class="input" onchange="showImg(this,'i1')"><img id="i1" style="width:100%;height:160px;object-fit:cover;border-radius:8px;display:none;margin-bottom:8px">
-<input type="file" id="pic2" accept="image/*" class="input" onchange="showImg(this,'i2')"><img id="i2" style="width:100%;height:160px;object-fit:cover;border-radius:8px;display:none;margin-bottom:8px">
-<input type="file" id="pic3" accept="image/*" class="input" onchange="showImg(this,'i3')"><img id="i3" style="width:100%;height:160px;object-fit:cover;border-radius:8px;display:none;margin-bottom:8px">
-<textarea id="f_desc" class="input" rows="4" placeholder="Full Detail * Required - Write about property, facilities, road, etc"></textarea>
-<button class="btn" style="background:#fbbf24;color:#0f172a;font-size:17px;margin-top:6px" onclick="publishNow()">✅ PUBLISH NOW - With Buy/Sale & Image</button>
-<button class="btn" style="background:#fff;color:#0f172a;margin-top:6px;border:1px solid #e2e8f0" onclick="clearForm()">Clear Form</button>
-</div>
-<div id="list"></div>
-</div>
-
-<div id="picModal" onclick="if(event.target.id=='picModal')closeModal()">
-<div style="background:white;max-width:650px;margin:20px auto;border-radius:16px;padding:16px;position:relative">
-<span onclick="closeModal()" style="position:absolute;top:10px;right:18px;font-size:32px;cursor:pointer;color:red">×</span>
-<img id="modalImg" src="" style="width:100%;border-radius:12px;max-height:400px;object-fit:cover">
-<h2 id="modalTitle" style="margin:14px 0 5px 0;color:#0f172a"></h2>
-<p id="modalPrice" style="color:#16a34a;font-weight:800;font-size:20px"></p>
-<p id="modalLocation" style="color:#64748b;font-size:13px"></p><hr style="margin:10px 0">
-<p id="modalDetail" style="white-space:pre-line;line-height:1.6;font-size:14px"></p>
-<p id="modalDate" style="font-size:11px;color:#94a3b8;margin-top:8px"></p>
-<a id="modalWhatsapp" href="#" target="_blank" style="display:block;text-align:center;margin-top:15px;padding:14px;background:#25D366;color:white;border-radius:10px;text-decoration:none;font-weight:800;font-size:16px">📲 WhatsApp Contact</a>
-</div></div>
-
-<a class="whatsapp" href="https://wa.me/923334113473">💬 WhatsApp 03334113473</a>
-
-<script>
-let allProps=JSON.parse(localStorage.getItem('jaidad_v5_english_final')||'[]');
-function showImg(input,id){let img=document.getElementById(id);if(input.files&&input.files[0]){let r=new FileReader();r.onload=e=>{img.src=e.target.result;img.style.display='block'};r.readAsDataURL(input.files[0])}}
-function publishNow(){
- try{
- let t=document.getElementById('f_title').value.trim(), pu=document.getElementById('f_purpose').value, ty=document.getElementById('f_type').value, ci=document.getElementById('f_city').value, pr=document.getElementById('f_price').value.trim(), wa=document.getElementById('f_wa').value.trim();
- if(!t||!pu||!ty||!ci||!pr||!wa){alert('❌ REQUIRED: Title, Purpose (Buy/Sale), Type, City, Price, WhatsApp - All are mandatory');return;}
- let waClean=wa.replace(/[^0-9]/g,''); if(waClean.startsWith('0'))waClean='92'+waClean.slice(1); if(!waClean.startsWith('92'))waClean='92'+waClean.slice(-10);
- let obj={id:Date.now(),title:t,purpose:pu,type:ty,city:ci,size:document.getElementById('f_size').value,price:pr,area:document.getElementById('f_area').value,wa:waClean,desc:document.getElementById('f_desc').value,img1:document.getElementById('i1').src||'',img2:document.getElementById('i2').src||'',img3:document.getElementById('i3').src||'',date:new Date().toLocaleDateString()};
- allProps.unshift(obj);localStorage.setItem('jaidad_v5_english_final',JSON.stringify(allProps));render(allProps);alert('✅ SUCCESS! Property Published with Image & Detail - Purpose: '+pu);clearForm();
- }catch(e){alert('Error: '+e.message)}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-function clearForm(){['f_title','f_size','f_price','f_area','f_desc'].forEach(id=>{let el=document.getElementById(id); if(el) el.value=''});['i1','i2','i3'].forEach(id=>{let im=document.getElementById(id); im.src=''; im.style.display='none';});document.getElementById('pic1').value='';document.getElementById('pic2').value='';document.getElementById('pic3').value='';}
-function openModalById(id){let p=allProps.find(x=>x.id==id); if(!p) return; document.getElementById('modalImg').src=(p.img1&&p.img1.startsWith('data:')?p.img1:(p.img2||'logo.png')); document.getElementById('modalTitle').innerText=p.title; document.getElementById('modalPrice').innerText=p.purpose+' - Rs. '+p.price; document.getElementById('modalLocation').innerText='📍 '+p.area+' | '+p.city+' | '+p.size; document.getElementById('modalDetail').innerText=p.desc; document.getElementById('modalDate').innerText='Date: '+p.date; document.getElementById('modalWhatsapp').href='https://wa.me/'+p.wa+'?text=Interested in '+encodeURIComponent(p.title); document.getElementById('modalWhatsapp').innerText='📲 WhatsApp: '+p.wa; document.getElementById('picModal').style.display='block';}
-function closeModal(){document.getElementById('picModal').style.display='none';}
-function render(data){
- let html=''; data.forEach(p=>{
-  let mainImg=p.img1&&p.img1.startsWith('data:')?p.img1:(p.img2&&p.img2.startsWith('data:')?p.img2:'');
-  html+=`<div class="prop" onclick="openModalById(${p.id})"><div style="padding:12px">${mainImg?`<img src="${mainImg}" style="width:100%;height:210px;object-fit:cover;border-radius:10px;margin-bottom:8px">`:`<div style="width:100%;height:120px;background:#f1f5f9;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#64748b">📷 Click to View Detail</div>`}<span class="badge" style="background:#0f172a;color:#fbbf24">${p.purpose}</span><span class="badge" style="background:#dbeafe;color:#1e40af">${p.type} ${p.size||''}</span><span class="badge" style="background:#fef3c7">📍 ${p.city}</span><h3 style="margin:8px 0">${p.title}</h3><p style="font-weight:800;color:#16a34a">Rs. ${p.price} - ${p.area}</p><p style="font-size:11px;color:#64748b">${p.date} | ${p.wa}</p><p style="font-size:12px;margin-top:4px">${(p.desc||'').substring(0,110)}</p><div style="display:flex;gap:8px;margin-top:10px"><a href="https://wa.me/${p.wa}" target="_blank" style="flex:1;background:#25D366;color:#fff;padding:10px;border-radius:8px;text-align:center;text-decoration:none;font-weight:800" onclick="event.stopPropagation()">WhatsApp</a><button style="flex:1;background:#fee2e2;color:#991b1b;border:none;border-radius:8px;font-weight:800;padding:10px" onclick="event.stopPropagation();deleteOne(${p.id})">Delete</button></div><div style="text-align:center;font-size:10px;color:#94a3b8;margin-top:6px">👆 Click Image for Big View + Full Detail</div></div></div>`;
- });
- document.getElementById('list').innerHTML=html||'<div class="card" style="text-align:center">No Ads Yet - Add Your First Property With Image Above!<br>Ad Will Never Auto-Delete!</div>';
+
+:root {
+    --green: #087c55;
+    --dark: #075c40;
+    --light: #eaf7f0;
+    --text: #24352e;
+    --muted: #6b7b73;
+    --white: #ffffff;
 }
-function deleteOne(id){if(confirm('Delete this property?')){allProps=allProps.filter(p=>p.id!==id);localStorage.setItem('jaidad_v5_english_final',JSON.stringify(allProps));render(allProps);}}
-render(allProps);
-</script>
-</body>
-</html
+
+body {
+    font-family: Arial, "Noto Sans Arabic", sans-serif;
+    color: var(--text);
+    background: #f7f9f8;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button, input, select {
+    font: inherit;
+}
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
+
+header {
+    background: white;
+    box-shadow: 0 2px 12px #0000000b;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    min-height: 76px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--green);
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.logo-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--green);
+    color: white;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    font-size: 25px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 19px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background: var(--green);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--dark);
+}
+
+.btn-outline {
+    border: 1px solid var(--green);
+    color: var(--green);
+    background: white;
+}
+
+/* HERO */
+
+.hero {
+    background:
+        linear-gradient(110deg, rgba(3,55,39,.91), rgba(8,124,85,.75)),
+        url("https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    min-height: 470px;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 65px 0;
+}
+
+.hero-content {
+    max-width: 820px;
+    margin: auto;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 54px);
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #f0fff6;
+}
+
+.search-box {
+    background: white;
+    border-radius: 13px;
+    padding: 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr auto;
+    gap: 10px;
+    box-shadow: 0 10px 35px #00000020;
+}
+
+.search-box select,
+.search-box input {
+    min-width: 0;
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #e1e8e4;
+    border-radius: 7px;
+    outline: none;
+    background: white;
+    color: #34483e;
+}
+
+.search-box select:focus,
+.search-box input:focus {
+    border-color: var(--green);
+}
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 65px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    color: var(--muted);
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.category-card {
+    background: white;
+    padding: 28px 15px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #edf1ee;
+    transition: 0.2s;
+}
+
+.category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px #0000000b;
+}
+
+.category-icon {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.category-card h3 {
+    margin-bottom: 5px;
+}
+
+.category-card p {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* PROPERTY CARDS */
+
+.properties-section {
+    background: #f0f5f2;
+}
+
+.property-grid {
+    display: grid
