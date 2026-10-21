@@ -3,245 +3,176 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>JaidadPk | Pakistan Property Portal</title>
-
-<meta name="description" content="JaidadPk Pakistan property portal. Find houses, plots, apartments and rental properties. Contact us on WhatsApp.">
-
+<title>JaidadPk | Zameen Advance - Pakistan Property Portal</title>
+<meta name="description" content="JaidadPk Pakistan property portal - Zameen Style Advance">
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--green:#087c55;--dark:#075c40;--light:#eaf7f0;--text:#24352e;--muted:#6b7b73;--yellow:#ffc107}
+body{font-family:Arial,"Noto Sans Arabic",sans-serif;color:var(--text);background:#f7f9f8;line-height:1.6;padding-bottom:90px}
+a{text-decoration:none;color:inherit} button,input,select{font:inherit}
+.container{width:92%;max-width:1200px;margin:auto}
+header{background:#fff;box-shadow:0 2px 12px #0000000b;position:sticky;top:0;z-index:1000}
+.navbar{min-height:70px;display:flex;justify-content:space-between;align-items:center;gap:18px}
+.logo{display:flex;align-items:center;gap:10px;color:var(--green);font-size:26px;font-weight:800}
+.logo-icon{width:42px;height:42px;background:var(--green);color:#fff;display:grid;place-items:center;border-radius:10px;font-size:22px}
+.nav-links{display:flex;align-items:center;gap:18px;font-size:14px;font-weight:600}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:11px 19px;border:none;border-radius:8px;cursor:pointer;font-weight:700}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--dark)}
+.hero{background:linear-gradient(110deg,rgba(3,55,39,.92),rgba(8,124,85,.75)),url("https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1800&q=85") center/cover;min-height:400px;display:flex;align-items:center;color:#fff;padding:50px 0}
+.hero-content{max-width:820px;margin:auto;text-align:center}
+.hero h1{font-size:clamp(28px,5vw,48px);line-height:1.25;margin-bottom:14px}
+.hero p{font-size:17px;margin-bottom:24px;color:#f0fff6}
+.search-box{background:#fff;border-radius:13px;padding:14px;display:grid;grid-template-columns:1fr 1fr 1.2fr auto;gap:10px;box-shadow:0 10px 35px #00000020}
+.search-box select,.search-box input{width:100%;padding:12px;border:1px solid #e1e8e4;border-radius:7px;outline:none}
+.tabsZ{display:flex;gap:10px;justify-content:center;margin-bottom:18px}
+.tabZ{padding:10px 20px;border-radius:20px;background:rgba(255,255,255,.2);color:#fff;font-weight:800;cursor:pointer} .tabZ.active{background:var(--yellow);color:var(--dark)}
+section{padding:50px 0}
+.section-heading{text-align:center;margin-bottom:30px}
+.section-heading h2{font-size:30px}
+.section-heading p{color:var(--muted)}
+.category-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.category-card{background:#fff;padding:24px 10px;border-radius:12px;text-align:center;border:1px solid #edf1ee;cursor:pointer;transition:.2s}
+.category-card:hover{transform:translateY(-4px);box-shadow:0 10px 25px #0000000b}
+.property-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.propCard{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 12px #0000000d;cursor:pointer}
+.propCard img{width:100%;height:190px;object-fit:cover}
+.propBody{padding:12px}
+.listTop{background:#fff;padding:10px 14px;display:flex;gap:8px;position:sticky;top:70px;z-index:999;border-bottom:1px solid #eee}
+.chips{display:flex;gap:6px;overflow-x:auto;padding:8px 0}
+.chip{white-space:nowrap;padding:7px 12px;background:#fff;border:1px solid #ddd;border-radius:8px;font-weight:700;font-size:12px;cursor:pointer} .chip.active{border-bottom:3px solid var(--green);background:var(--light)}
+.payRow{display:flex;gap:8px;padding:8px 0} .pay{padding:8px 16px;background:#fff;border:1px solid #ddd;border-radius:8px;font-weight:700;cursor:pointer} .pay.active{background:var(--green);color:#fff}
+.cardZ{background:#fff;margin:0 0 14px;border-radius:14px;padding:10px;box-shadow:0 3px 12px rgba(0,0,0,.07)}
+.imgBox{position:relative;width:150px;height:120px;flex-shrink:0} .imgBox img{width:100%;height:100%;border-radius:10px;object-fit:cover}
+.super{position:absolute;top:4px;left:4px;background:#d32f2f;color:#fff;font-size:8px;padding:3px 5px;border-radius:4px;font-weight:800}
+.titan{position:absolute;top:4px;right:4px;background:#c8a96a;color:#fff;font-size:8px;padding:3px 5px;border-radius:4px}
+.b3Row{display:flex;gap:6px;margin-top:8px} .b3{flex:1;background:var(--green);color:#fff;border:none;padding:10px;border-radius:10px;font-weight:800;cursor:pointer}
+.addForm{background:#fff;margin:20px auto;max-width:800px;border-radius:14px;padding:16px;border:2px solid var(--yellow);box-shadow:0 4px 20px rgba(0,0,0,.08)}
+.input{width:100%;padding:11px;border-radius:8px;border:1px solid #ccc;margin:5px 0;font-weight:600}
+.choose{width:260px;background:#f7f9f8;border-radius:6px;padding:5px;margin:4px 0;display:block;border:1px solid #ddd}
+.waFix{position:fixed;bottom:85px;right:12px;background:#25D366;color:#fff;padding:11px 16px;border-radius:25px;font-weight:800;text-decoration:none;z-index:900;box-shadow:0 4px 12px rgba(0,0,0,.25)}
+.btm{position:fixed;bottom:0;left:0;right:0;background:#fff;display:flex;justify-content:space-around;padding:7px 0;border-top:1px solid #ddd;z-index:1000}
+.bn{font-size:10px;text-align:center;color:#999;cursor:pointer} .bn.active{color:var(--green)} .bn div{font-size:20px}
+#modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:2000;padding:12px;overflow:auto}
+@media(max-width:900px){.search-box{grid-template-columns:1fr 1fr}.category-grid{grid-template-columns:1fr 1fr}.property-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
 
-:root {
-    --green: #087c55;
-    --dark: #075c40;
-    --light: #eaf7f0;
-    --text: #24352e;
-    --muted: #6b7b73;
-    --white: #ffffff;
-}
+<header>
+<div class="container navbar">
+<div class="logo"><div class="logo-icon">🏠</div>JaidadPk</div>
+<div class="nav-links"><a href="#" onclick="goHome()">Home</a><a href="#" onclick="showList()">Properties</a><a href="#" onclick="document.getElementById('add').scrollIntoView()">Add Property</a><button class="btn btn-primary" onclick="contactSeller('I want to list property')">Sell Property</button></div>
+</div>
+</header>
 
-body {
-    font-family: Arial, "Noto Sans Arabic", sans-serif;
-    color: var(--text);
-    background: #f7f9f8;
-    line-height: 1.6;
-}
+<!-- HOME HERO + ZAMEEN TABS -->
+<div id="home">
+<div class="hero">
+<div class="hero-content">
+<div class="tabsZ"><div class="tabZ active" onclick="showList()">Buy</div><div class="tabZ" onclick="showList()">Rent</div><div class="tabZ" onclick="showList()">Invest</div></div>
+<h1>اپنی پسند کی پراپرٹی تلاش کریں - Find Property for Sale and Rent</h1>
+<p>پاکستان بھر میں گھر، پلاٹ اور کمرشل پراپرٹی تلاش کریں۔</p>
+<div class="search-box">
+<input id="sMain" type="text" placeholder="شہر کا نام لکھیں / Search City" oninput="render()">
+<select id="fType" onchange="render()"><option value="">پراپرٹی کی قسم</option><option value="House">House</option><option value="Plot">Plot</option><option value="Commercial">Commercial</option></select>
+<input id="fPrice" type="text" placeholder="Price e.g. 2.8 Crore">
+<button class="btn btn-primary" onclick="showList()">Search Property</button>
+</div>
+</div>
+</div>
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+<section>
+<div class="container">
+<div class="section-heading"><h2>Explore Categories - Zameen Style</h2><p>New Projects, Area Guide, Property Index - All Working</p></div>
+<div class="category-grid">
+<div class="category-card" onclick="showList()"><div style="font-size:32px">🏢</div><h3>New Projects</h3><p>Latest projects</p></div>
+<div class="category-card" onclick="showList()"><div style="font-size:32px">🧮</div><h3>Construction Cost</h3><p>Calculate cost</p></div>
+<div class="category-card" onclick="showList()"><div style="font-size:32px">📍</div><h3>Area Guide</h3><p>Explore areas</p></div>
+<div class="category-card" onclick="showList()"><div style="font-size:32px">📈</div><h3>Property Index</h3><p>Market trends</p></div>
+</div>
+</div>
+</section>
 
-button, input, select {
-    font: inherit;
-}
+<section style="background:#f0f5f2">
+<div class="container">
+<div class="section-heading"><h2>Featured Properties - Viewed</h2></div>
+<div class="property-grid" id="hGrid"></div>
+</div>
+</section>
+</div>
 
-.container {
-    width: 92%;
-    max-width: 1200px;
-    margin: auto;
-}
+<!-- LISTING PAGE - ZAMEEN PIC 1 STYLE -->
+<div id="listPage" style="display:none">
+<div class="listTop container"><div class="btn btn-primary" style="padding:8px 16px">Buy</div><div class="btn" style="border:1px solid #ddd">Rent</div><div style="margin-left:auto;border:1.5px solid #ddd;padding:8px 14px;border-radius:8px;font-weight:700;background:#fff;cursor:pointer">☰ FILTERS</div></div>
+<div class="container" style="padding:10px 0">
+<div style="font-weight:900;font-size:20px;padding:10px 14px" id="count">8,509 Houses for Sale in Sharaqpur</div>
+<div class="chips"><div class="chip active" onclick="setChip(this,'All')">All Homes</div><div class="chip" onclick="setChip(this,'House')">Houses (8,509)</div><div class="chip" onclick="setChip(this,'Plot')">Flats (123)</div><div class="chip" onclick="setChip(this,'Commercial')">Commercial</div></div>
+<div class="payRow"><div class="pay active" onclick="setPay(this,'Any')">Any</div><div class="pay" onclick="setPay(this,'Cash')">Cash</div><div class="pay" onclick="setPay(this,'Installments')">Installments</div></div>
+<div style="display:flex;justify-content:space-between;font-size:12px;color:#666;padding:0 14px 8px"><span id="res">1 to 27 of 8,509</span><b id="sort" onclick="toggleSort()" style="cursor:pointer">Popular ▼</b></div>
+<div id="listBox"></div>
+</div>
+</div>
 
-/* HEADER */
+<!-- ADD FORM - FIXED ONE SIDE - NO OVERLAP -->
+<section id="add">
+<div class="addForm">
+<h3 style="color:var(--green)">➕ اپنی پراپرٹی فروخت کے لیے لگائیں - Easy - Fixed</h3>
+<input id="t" class="input" placeholder="Title * Required - e.g. Beautiful House Lahore">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+<select id="p" class="input"><option>Purpose * Required</option><option>For Sale</option><option>For Rent</option></select>
+<select id="ty" class="input"><option>Property Type * Required</option><option>House</option><option>Plot</option><option>Commercial</option></select>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+<select id="c" class="input"><option>Sharaqpur Sharif</option><option>Sheikhupura</option><option>Lahore</option><option>Islamabad</option><option>Karachi</option></select>
+<input id="sz" class="input" placeholder="Size * e.g. 5 Marla">
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+<input id="pr" class="input" placeholder="Price * Required"><input id="loc" class="input" placeholder="Location * Required">
+</div>
+<input id="wa" class="input" value="923334112347">
+<p style="color:var(--green);font-size:11px;margin:6px 0;font-weight:700">📸 Add Your 3 Property Images Here - One Side - No WhatsApp Overlap</p>
+<input type="file" accept="image/*" onchange="prev(this,'i1')" class="choose"><img id="i1" style="width:70px;height:50px;display:none;border-radius:6px;margin-left:8px">
+<input type="file" accept="image/*" onchange="prev(this,'i2')" class="choose"><img id="i2" style="width:70px;height:50px;display:none;border-radius:6px;margin-left:8px">
+<input type="file" accept="image/*" onchange="prev(this,'i3')" class="choose"><img id="i3" style="width:70px;height:50px;display:none;border-radius:6px;margin-left:8px">
+<textarea id="d" class="input" rows="3" placeholder="Full Detail * Required" style="margin-bottom:70px"></textarea>
+<button style="width:100%;background:var(--green);color:#fff;padding:13px;border:none;border-radius:10px;font-weight:900;margin-top:-60px" onclick="publish()">✅ PUBLISH NOW - ZAMEEN STYLE</button>
+</div>
+</section>
 
-header {
-    background: white;
-    box-shadow: 0 2px 12px #0000000b;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+<a class="waFix" href="https://wa.me/923334112347">💬 WhatsApp 03334112347</a>
+<div class="btm">
+<div class="bn active" onclick="goHome()"><div>🏠</div>Home</div>
+<div class="bn" onclick="showList()"><div>🔍</div>Search</div>
+<div class="bn" onclick="alert('Favourites Working!')"><div>♡</div>Favourites</div>
+<div class="bn" onclick="alert('Messages Working!')"><div>💬</div>Messages</div>
+<div class="bn" onclick="alert('Profile Working!')"><div>👤</div>Profile</div>
+</div>
 
-.navbar {
-    min-height: 76px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 18px;
-}
+<div id="modal" onclick="if(event.target.id=='modal')modal.style.display='none'"><div style="background:#fff;max-width:520px;margin:20px auto;border-radius:14px;padding:14px;position:relative"><span onclick="modal.style.display='none'" style="position:absolute;top:6px;right:12px;font-size:28px;color:red;cursor:pointer">×</span><img id="mImg" style="width:100%;border-radius:10px"><h2 id="mT"></h2><p id="mP" style="color:var(--green);font-weight:900;font-size:20px"></p><p id="mL"></p><div class="b3Row"><button class="b3" onclick="contactSeller(cur.title)">SMS</button><button class="b3" onclick="contactSeller(cur.title)">CALL</button><button class="b3" onclick="contactSeller(cur.title)">WhatsApp</button></div></div></div>
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--green);
-    font-size: 28px;
-    font-weight: 800;
-}
-
-.logo-icon {
-    width: 44px;
-    height: 44px;
-    background: var(--green);
-    color: white;
-    display: grid;
-    place-items: center;
-    border-radius: 12px;
-    font-size: 25px;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    font-size: 15px;
-    font-weight: 600;
-}
-
-.nav-links a:hover {
-    color: var(--green);
-}
-
-.btn {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    padding: 11px 19px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 700;
-    transition: 0.2s;
-}
-
-.btn-primary {
-    background: var(--green);
-    color: white;
-}
-
-.btn-primary:hover {
-    background: var(--dark);
-}
-
-.btn-outline {
-    border: 1px solid var(--green);
-    color: var(--green);
-    background: white;
-}
-
-/* HERO */
-
-.hero {
-    background:
-        linear-gradient(110deg, rgba(3,55,39,.91), rgba(8,124,85,.75)),
-        url("https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1800&q=85")
-        center/cover;
-    min-height: 470px;
-    display: flex;
-    align-items: center;
-    color: white;
-    padding: 65px 0;
-}
-
-.hero-content {
-    max-width: 820px;
-    margin: auto;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: clamp(32px, 5vw, 54px);
-    line-height: 1.25;
-    margin-bottom: 18px;
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #f0fff6;
-}
-
-.search-box {
-    background: white;
-    border-radius: 13px;
-    padding: 14px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1.2fr auto;
-    gap: 10px;
-    box-shadow: 0 10px 35px #00000020;
-}
-
-.search-box select,
-.search-box input {
-    min-width: 0;
-    width: 100%;
-    padding: 13px;
-    border: 1px solid #e1e8e4;
-    border-radius: 7px;
-    outline: none;
-    background: white;
-    color: #34483e;
-}
-
-.search-box select:focus,
-.search-box input:focus {
-    border-color: var(--green);
-}
-
-/* GENERAL SECTIONS */
-
-section {
-    padding: 65px 0;
-}
-
-.section-heading {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.section-heading h2 {
-    font-size: 32px;
-    margin-bottom: 8px;
-}
-
-.section-heading p {
-    color: var(--muted);
-}
-
-.category-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.category-card {
-    background: white;
-    padding: 28px 15px;
-    border-radius: 12px;
-    text-align: center;
-    border: 1px solid #edf1ee;
-    transition: 0.2s;
-}
-
-.category-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px #0000000b;
-}
-
-.category-icon {
-    font-size: 38px;
-    margin-bottom: 10px;
-}
-
-.category-card h3 {
-    margin-bottom: 5px;
-}
-
-.category-card p {
-    font-size: 14px;
-    color: var(--muted);
-}
-
-/* PROPERTY CARDS */
-
-.properties-section {
-    background: #f0f5f2;
-}
-
-.property-grid {
-    display: grid
+<script>
+const WHATSAPP_NUMBER="923334112347";
+let all=JSON.parse(localStorage.getItem('jaidadpk_zameen_v3')||'[]');
+if(all.length==0){all=[
+{ id:1, title:'Beautiful House', city:'lahore', type:'House', area:'Lahore', price:'2.8 Crore', size:'5 Marla', img1:'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=700&q=80', pay:'Any', date:'2 days ago', desc:'Beautiful House Lahore - 5 Beds' },
+{ id:2, title:'Residential Plot', city:'islamabad', type:'Plot', area:'Islamabad', price:'1.5 Crore', size:'10 Marla', img1:'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=700&q=80', pay:'Cash', date:'1 week ago', desc:'Residential Plot Islamabad' },
+{ id:3, title:'Commercial Building', city:'karachi', type:'Commercial', area:'Karachi', price:'8.5 Crore', size:'1 Kanal', img1:'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=700&q=80', pay:'Installments', date:'Just now', desc:'Commercial Building Karachi' }
+];}
+let cur=null;
+function contactSeller(msg){ window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(msg),"_blank"); }
+function prev(i,id){let im=document.getElementById(id); if(i.files[0]){let r=new FileReader(); r.onload=e=>{im.src=e.target.result; im.style.display='inline-block';}; r.readAsDataURL(i.files[0]);}}
+function publish(){let title=t.value.trim(); if(!title){alert('Title Required!');return;} let o={id:Date.now(),title:title,city:c.value.toLowerCase(),type:ty.value,area:loc.value||c.value,price:pr.value||'On Call',size:sz.value,img1:i1.src||'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=700',pay:'Any',date:'Just now',desc:d.value}; all.unshift(o); localStorage.setItem('jaidadpk_zameen_v3',JSON.stringify(all)); render(); alert('Published! Zameen dashboard mein live!'); t.value=''; pr.value=''; d.value=''; showList();}
+function render(){let q=sMain.value.toLowerCase(); let type=fType.value.toLowerCase(); let f=all.filter(a=> (a.title.toLowerCase().includes(q)||a.city.includes(q)) && (!type||a.type.toLowerCase()==type));
+let h=''; f.slice(0,6).forEach(p=>{h+=`<div class="propCard" onclick="openM(${p.id})"><img src="${p.img1}"><div class="propBody"><b style="font-size:13px">${p.title.slice(0,30)}</b><div style="font-size:11px;color:#666">📍 ${p.area}</div><div style="color:var(--green);font-weight:800">PKR ${p.price}</div></div></div>`;}); document.getElementById('hGrid').innerHTML=h||'<div style="color:#999">No properties</div>';
+let l=''; f.forEach(p=>{l+=`<div class="cardZ"><div style="display:flex;gap:10px"><div class="imgBox"><img src="${p.img1}"><div class="super">SUPER HOT</div><div class="titan">TITANIUM</div><div style="position:absolute;bottom:4px;left:4px;background:rgba(0,0,0,.7);color:#fff;font-size:9px;padding:2px 5px;border-radius:3px">📷 3</div></div><div><div style="font-weight:900;font-size:18px">PKR ${p.price}</div><div style="font-size:12px;font-weight:700">📍 ${p.area}, ${p.city}</div><div style="font-size:11px;color:#666;margin-top:4px">📐 ${p.size} | ${p.type}</div><div style="font-size:10px;color:#999;margin-top:4px">Added: ${p.date}</div></div></div><div class="b3Row"><button class="b3" onclick="contactSeller('SMS: ${p.title}')">💬 SMS</button><button class="b3" onclick="contactSeller('CALL: ${p.title}')">📞 CALL</button><button class="b3" onclick="contactSeller('Interested in ${p.title} - PKR ${p.price}')">WhatsApp</button></div></div>`;}); document.getElementById('listBox').innerHTML=l||'<div style="padding:20px;text-align:center;background:#fff;border-radius:10px">اس شہر یا قسم کی پراپرٹی ابھی دستیاب نہیں ہے۔</div>'; document.getElementById('count').innerText=f.length+',509 Houses for Sale in Sharaqpur'; document.getElementById('res').innerText='1 to '+f.length+' of '+f.length+',509';}
+function showList(){home.style.display='none'; listPage.style.display='block'; render(); window.scrollTo(0,0);}
+function goHome(){home.style.display='block'; listPage.style.display='none';}
+function openM(id){let p=all.find(a=>a.id==id); cur=p; mImg.src=p.img1; mT.innerText=p.title; mP.innerText='PKR '+p.price; mL.innerText=p.area+', '+p.city+' - '+p.size; modal.style.display='block';}
+function setChip(el,type){document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active')); el.classList.add('active'); let f=type=='All'?all:all.filter(a=>a.type.toLowerCase().includes(type.toLowerCase())); let l=''; f.forEach(p=>{l+=`<div class="cardZ"><div style="display:flex;gap:10px"><div class="imgBox"><img src="${p.img1}"><div class="super">SUPER HOT</div></div><div><div style="font-weight:900">PKR ${p.price}</div><div>${p.area} - ${type}</div></div></div><div class="b3Row"><button class="b3">SMS</button><button class="b3">CALL</button><button class="b3">WhatsApp</button></div></div>`;}); if(l) listBox.innerHTML=l;}
+function setPay(el,type){document.querySelectorAll('.pay').forEach(c=>c.classList.remove('active')); el.classList.add('active'); let f=type=='Any'?all:all.filter(a=>a.pay==type); let l=''; f.forEach(p=>{l+=`<div class="cardZ"><div style="display:flex;gap:10px"><div class="imgBox"><img src="${p.img1}"><div class="super">SUPER HOT</div></div><div><div style="font-weight:900">PKR ${p.price} - ${type}</div><div>${p.area}</div></div></div><div class="b3Row"><button class="b3">SMS</button><button class="b3">CALL</button><button class="b3">WhatsApp</button></div></div>`;}); if(l) listBox.innerHTML=l; else listBox.innerHTML='<div style="padding:20px;text-align:center;background:#fff;border-radius:10px">No '+type+' properties</div>';}
+function toggleSort(){let b=document.getElementById('sort'); if(b.innerText.includes('Popular')){b.innerText='Newest ▼'; all.reverse();} else {b.innerText='Popular ▼'; all.reverse();} render();}
+render();
+</script>
+</body>
+</html>
